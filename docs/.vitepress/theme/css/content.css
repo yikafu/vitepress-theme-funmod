@@ -8,7 +8,7 @@
   font-size: 1.5em;
   padding-bottom: 0.3em;
   margin-bottom: 1em;
-  border-bottom: 1px dashed;
+  border-bottom: 1px solid #c7c3c3;
 }
 .content h3 {
   display: block;

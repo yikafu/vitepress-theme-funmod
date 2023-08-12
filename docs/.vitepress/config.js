@@ -10,9 +10,8 @@ export default defineConfigWithTheme({
   ],
   // 主题配置
   themeConfig: {
-    logo: "https://avatars.githubusercontent.com/u/22140988?s=200&v=4", // 网站logo
     search: {
-      provider: "local",
+      provider: 'local',
     },
     // 打包配置(输出目录)
     outDir: "../dist",

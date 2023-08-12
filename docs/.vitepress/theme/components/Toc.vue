@@ -1,6 +1,5 @@
 <template>
   <div class="toclist">
-    <!-- {{ console.log(tocdata) }} -->
     <ol>
       <li v-for="i in tocdata" :key="i">
         <a
@@ -66,11 +65,12 @@ ol {
 }
 
 li {
-  border-left: 2px solid var(--color-background);
+  border-left: 3px solid var(--bg-color);
+  transition: border-left .3s cubic-bezier(.645,.045,.355,1);
 }
 
 li.active {
-  border-left: 2px solid var(--main-color);
+  border-left: 3px solid var(--main-color);
 }
 
 a {

@@ -12,10 +12,10 @@
                   <i class="fa-solid fa-clock"></i>
                   创建于{{ item.date.split("T")[0] }}
                 </span>
-                <span v-for="tag in item.tags" :key="tag">
+                <a :href="`/tags/?tag=${tag}`" v-for="tag in item.tags" :key="tag">
                   <i class="fa-solid fa-tag"></i>
                   {{ tag }}
-                </span>
+                </a>
               </div>
             </article>
           </div>
@@ -25,22 +25,14 @@
   </div>
 </template>
 
-<script>
-import { inject } from "vue";
-export default {
-  name: "BlogList",
-  setup() {
-    const postdata = inject("postData");
-    return {
-      postdata,
-    };
+<script setup>
+import { data as alldata } from "../../post.data.js";
+const postdata = alldata.postData;
+const props = defineProps({
+  tag: {
+    type: String,
   },
-  props: {
-    tag: {
-      type: String,
-    },
-  },
-};
+})
 </script>
 
 <style scoped>
@@ -91,14 +83,20 @@ div.title {
 .post-time {
   font-size: 16px;
   display: inline;
+  margin-right: 10px;
 }
 .post-fm {
   bottom: 24px;
   position: absolute;
 }
-.post-fm span {
+.post-fm a {
+  color: var(--text-color);
   margin-right: 10px;
   margin-top: 10px;
   font-size: 16px;
+  transition: color 0.3s ease;
+}
+.post-fm a:hover {
+  color: var(--main-color);
 }
 </style>

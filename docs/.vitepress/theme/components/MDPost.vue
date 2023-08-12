@@ -4,6 +4,7 @@
     <div class="info">更新于 {{ fm.date.split("T")[0] }}</div>
   </div>
   <div class="post">
+    <p>{{ $frontmatter.description }}</p>
     <Content class="content" />
   </div>
   <Toc class="toc" :tocdata="tocdata" />

@@ -16,20 +16,13 @@
   </div>
 </template>
 
-<script>
-
-export default {
-  name: "Archive",
-  setup() {
-    return {};
+<script setup>
+const props = defineProps({
+  yeardata: {
+    type: Object,
+    default: () => {},
   },
-  props: {
-    yeardata: {
-      type: Object,
-      default: () => {},
-    },
-  },
-};
+})
 </script>
 
 <style scoped>
