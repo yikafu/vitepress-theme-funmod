@@ -95,6 +95,6 @@ export default {
 .info {
   margin-top: 27px;
   font-size: 1.2rem;
-  color: #666;
+  color: #eee;
 }
 </style>

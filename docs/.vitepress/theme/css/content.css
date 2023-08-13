@@ -8,7 +8,7 @@
   font-size: 1.5em;
   padding-bottom: 0.3em;
   margin-bottom: 1em;
-  border-bottom: 1px solid #c7c3c3;
+  border-bottom: 1px solid var(--main-color);
 }
 .content h3 {
   display: block;
@@ -16,6 +16,9 @@
 }
 .content p {
   line-height: 1.5em;
+  text-indent: 2em;
+  margin-block-end: 0.5em;
+  word-wrap: break-word;
 }
 
 .content li {
@@ -38,5 +41,5 @@
   transition: color 0.2s ease-out;
 }
 .content a:hover {
-  color: #0fbcb7;
+  color: var(--light-color);
 }

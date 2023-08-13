@@ -27,7 +27,6 @@ const props = defineProps({
 
 <style scoped>
 h1.archive-title {
-  /* 居中 */
   width: 100%;
   height: 100px;
   text-align: center;
@@ -53,13 +52,12 @@ h1.archive-title {
   margin-right: 5px;
   padding: 10px 0;
   font-size: 18px;
-  color: #333;
   text-decoration: none;
 }
 
 #text:hover {
   cursor: pointer;
-  box-shadow: #beb8b8 0px 1px 0px;
+  box-shadow: var(--main-color) 0px 1px 0px;
   width: 100%;
 }
 

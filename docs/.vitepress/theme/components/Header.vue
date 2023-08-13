@@ -37,7 +37,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.9);
+  /* 毛玻璃半透明效果 */
+  background-color: rgba(45, 73, 90, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
   z-index: 100;
 }
 .container {

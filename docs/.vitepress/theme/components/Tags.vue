@@ -1,12 +1,12 @@
 <template>
   <div>
     <h1 class="tags-title">{{ st !== 'undefined' ? st : "标签" }}</h1>
-    <div class="tags-box">
+    <div class="tags-box" v-if="isshow">
       <a :href="`/tags/?tag=${t}`" v-for="t in tagdata" :key="t.id">
         <span @click="selectedTag()">{{ t }}</span>
       </a>
     </div>
-    <BlogList v-if="!showTagList" :tag="st" />
+    <BlogList v-if="!isshow" :tag="st" />
   </div>
 </template>
 
@@ -14,7 +14,7 @@
 import { ref , onMounted, onUnmounted } from "vue";
 let query = decodeURI(window.location.href.split('?tag=')[1]);
 const st = ref(query)
-const showTagList = ref(st.value === '标签');
+const isshow = ref(true)
 const props = defineProps({
   tagdata: {
     type: Array,
@@ -27,11 +27,13 @@ function selectedTag() {
   if (newTag !== st) {
     st.value = newTag;
   }
+  isshow.value = false;
 }
 
 function setgoTags(){
   document.getElementById('goTags').onclick = () => {
-    showTagList.value = true;
+    isshow.value = true;
+    st.value = '标签';
   }
 }
 
@@ -71,9 +73,13 @@ span {
   width: 20px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: #333;
   font-size: 18px;
   border: 2px solid #777777;
+}
+
+span:hover {
+  color: rgb(138, 20, 89);
+  border-color: rgb(138, 20, 89);
 }
 span:active {
   color: rgb(138, 20, 89);

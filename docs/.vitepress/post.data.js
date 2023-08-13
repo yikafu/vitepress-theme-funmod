@@ -29,11 +29,12 @@ function getallData() {
     let fullpath = parentPath + item; //当前文件路径
     let fileContent = fs.readFileSync(fullpath, "utf-8"); //读取文件内容
     const { data, content } = matter(fileContent);
-    
+    const des = content.slice(0, 100) + '...';
     const frontmatter = {
       title: data.title,
       date: data.date.toISOString().split("T")[0],
       tags: data.tags,
+      description: des
     };
     // 读取tags
     if (data.tags) {

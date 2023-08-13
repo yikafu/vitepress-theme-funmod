@@ -7,12 +7,19 @@
           <div class="post">
             <article>
               <div class="title">{{ item.title }}</div>
+              <p>
+                {{ item.description }}
+              </p>
               <div class="post-fm">
                 <span class="post-time">
                   <i class="fa-solid fa-clock"></i>
                   创建于{{ item.date.split("T")[0] }}
                 </span>
-                <a :href="`/tags/?tag=${tag}`" v-for="tag in item.tags" :key="tag">
+                <a
+                  :href="`/tags/?tag=${tag}`"
+                  v-for="tag in item.tags"
+                  :key="tag"
+                >
                   <i class="fa-solid fa-tag"></i>
                   {{ tag }}
                 </a>
@@ -32,7 +39,7 @@ const props = defineProps({
   tag: {
     type: String,
   },
-})
+});
 </script>
 
 <style scoped>
@@ -98,5 +105,13 @@ div.title {
 }
 .post-fm a:hover {
   color: var(--main-color);
+}
+article p {
+  padding: 28px 0;
+  text-indent: 2em;
+  text-align: initial;
+  word-wrap: break-word;
+  color: #9c9c9c;
+  line-height: 25px;
 }
 </style>

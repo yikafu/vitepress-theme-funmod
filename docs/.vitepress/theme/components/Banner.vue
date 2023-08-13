@@ -13,8 +13,8 @@
 <style scoped>
 .banner {
   height: 100vh;
-  /* background: url('/public/bg.png') no-repeat center center; */
-  background: #ffdddd;
+  background: url('https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/p9/wallhaven-p97l5e.png?w=2560&h=1440&fmt=webp') no-repeat center center;
+  /* background: #000000; */
   background-size: cover;
   position: relative;
   overflow: hidden;
