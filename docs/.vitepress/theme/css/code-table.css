@@ -64,7 +64,7 @@ button.copy {
   width: 27px;
   height: 27px;
   opacity: 0.1;
-  background-image: url(../public/file-lines.svg);
+  background-image: url(/file-lines.svg);
   background-repeat: no-repeat;
   background-position: center;
 }

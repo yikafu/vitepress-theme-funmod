@@ -21,7 +21,7 @@ export default defineConfigWithTheme({
     anchor: {
       permalink: true,
       permalinkBefore: true,
-      permalinkSymbol: '#'
-    }
+      permalinkSymbol: '#',
+    },
   },
 });
