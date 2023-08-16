@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+import { onMounted, onUnmounted } from "vue";
 
 function returntop() {
   window.scrollTo({
@@ -13,12 +14,20 @@ function returntop() {
   });
 }
 
-window.addEventListener("scroll", () => {
+function showBlock() {
   if (window.scrollY > 1000) {
     document.querySelector(".returntop").style.display = "block";
   } else {
     document.querySelector(".returntop").style.display = "none";
   }
+}
+
+onMounted(() => {
+  window.addEventListener("scroll", showBlock);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", showBlock);
 });
 </script>
 

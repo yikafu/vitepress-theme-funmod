@@ -7,6 +7,8 @@ import BlogList from "./components/BlogList.vue";
 import Archive from "./components/Archive.vue";
 import Tags from "./components/Tags.vue";
 import MDPost from "./components/MDPost.vue";
+import ReturnTop from "./components/ReturnTop.vue";
+import NotFound from "./components/NotFound.vue";
 import "./css/custom.css";
 
 
@@ -20,6 +22,8 @@ export default {
     app.component('BlogList', BlogList),
     app.component('Archive', Archive),
     app.component('Tags', Tags),
-    app.component('MDPost', MDPost)
+    app.component('MDPost', MDPost),
+    app.component('ReturnTop', ReturnTop),
+    app.component('NotFound', NotFound)
   }
 };

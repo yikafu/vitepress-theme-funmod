@@ -1,0 +1,104 @@
+/* 代码 */
+blockquote {
+  margin: 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: var(--code-font-family);
+  font-size: 14px;
+}
+li > code,
+p > code {
+  margin: 0 0.1em;
+  padding: 0 0.1em;
+  background-color: var(--code-span-color);
+  font-size: 16px;
+  border-radius: 5%;
+}
+div[class*="language-"] {
+  position: relative;
+  font-size: var(--code-font-size);
+  font-family: var(--code-font-family);
+  display: flex;
+  background: var(--color-dark);
+  flex-direction: row-reverse;
+  border-radius: 8px;
+  padding-top: 32px;
+  overflow: hidden;
+}
+div[class*="language-"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 32px;
+  background: var(--color-dark);
+  border-bottom: 1px solid var(--color-black);
+}
+div[class*="language-"]:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+}
+div[class*="language-"] pre {
+  margin: 0 0 5px 16px;
+  flex-grow: 1;
+  overflow: auto;
+}
+.line-numbers-wrapper {
+  padding-left: 16px;
+  color: var(--color-gray);
+  user-select: none;
+}
+span.lang {
+  display: none;
+}
+button.copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 27px;
+  height: 27px;
+  opacity: 0.1;
+  background-image: url(/file-lines.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+button.copy:hover {
+  opacity: 0.5;
+}
+/* table */
+table {
+  display: block;
+  border-collapse: collapse;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+tr {
+  border-top: 1px solid var(--color-border);
+  transition: background-color 0.5s;
+}
+th,
+td {
+  border: 1px solid var(--color-border);
+  padding: 8px 16px;
+}
+
+th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: #eee;
+}
+td {
+  font-size: 14px;
+}

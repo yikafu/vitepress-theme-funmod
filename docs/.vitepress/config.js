@@ -1,7 +1,8 @@
 import { defineConfigWithTheme } from 'vitepress'
 
 export default defineConfigWithTheme({
-  title: "自定义的 title", // 网站的标题
+  title: "MyBlog", // 网站的标题
+  base: "/",
   lang: "zh-CN", // 语言
   head: [
     ['link',{ rel:"stylesheet",href:"https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&display=swap"}],

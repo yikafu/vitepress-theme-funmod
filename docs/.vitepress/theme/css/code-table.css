@@ -11,8 +11,11 @@ samp {
 }
 li > code,
 p > code {
+  margin: 0 0.1em;
+  padding: 0 0.1em;
   background-color: var(--code-span-color);
   font-size: 16px;
+  border-radius: 5%;
 }
 div[class*="language-"] {
   position: relative;

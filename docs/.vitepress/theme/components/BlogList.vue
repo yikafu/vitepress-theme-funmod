@@ -13,7 +13,7 @@
               <div class="post-fm">
                 <span class="post-time">
                   <i class="fa-solid fa-clock"></i>
-                  创建于{{ item.date.split("T")[0] }}
+                  创建于{{ item.date }}
                 </span>
                 <a
                   :href="`/tags/?tag=${tag}`"

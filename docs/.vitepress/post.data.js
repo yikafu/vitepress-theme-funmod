@@ -32,7 +32,7 @@ function getallData() {
     const des = content.slice(0, 100) + '...';
     const frontmatter = {
       title: data.title,
-      date: data.date.toISOString().split("T")[0],
+      date: (data.date).toISOString().slice(0, 10),
       tags: data.tags,
       description: des
     };
@@ -66,7 +66,7 @@ function getallData() {
 function getYearData(Obj) {
   const yeardatas = Object.entries(Obj)
     .map(([key, value]) => ({
-      year: value.date.split("-")[0],
+      year: value.date.slice(0, 4),
       time: value.date.slice(5, 10),
       name: key.replace(".md", ""),
     }))

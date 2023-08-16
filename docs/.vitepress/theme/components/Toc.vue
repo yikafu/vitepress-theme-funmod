@@ -23,33 +23,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  setup() {
-    function activeLabel(e) {
-      let active = "#" + e.target.id;
-      document.querySelectorAll("li").forEach((item) => {
-        item.classList.remove('active');
-      });
-      e.target.parentElement.classList.add('active');
-      document.querySelectorAll("a.h3").forEach((item) => {
-        item.style.display = "none";
-      });
-      const all = document.querySelectorAll(active);
-      all.forEach((item) => {
-        item.style.display = "block";
-      });
-      }
-    return {
-      activeLabel,
-    };
+<script setup>
+const props = defineProps({
+  tocdata: {
+    type: Array,
   },
-  props: {
-    tocdata: {
-      type: Array,
-    },
-  },
-};
+});
+
+function activeLabel(e) {
+  let active = "#" + e.target.id;
+  document.querySelectorAll("li").forEach((item) => {
+    item.classList.remove("active");
+  });
+  e.target.parentElement.classList.add("active");
+  document.querySelectorAll("a.h3").forEach((item) => {
+    item.style.display = "none";
+  });
+  const all = document.querySelectorAll(active);
+  all.forEach((item) => {
+    item.style.display = "block";
+  });
+}
 </script>
 
 <style scoped>
@@ -66,7 +60,7 @@ ol {
 
 li {
   border-left: 3px solid var(--bg-color);
-  transition: border-left .3s cubic-bezier(.645,.045,.355,1);
+  transition: border-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 li.active {
