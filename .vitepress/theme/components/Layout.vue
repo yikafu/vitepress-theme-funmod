@@ -18,13 +18,13 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+import { computed} from "vue";
 import { useRoute , useData} from "vitepress";
 import { data as alldata } from "../../post.data.js";
 
 const route = useRoute();
 const { page, frontmatter } = useData()
-const path = computed(() => route.path);
+const path = computed(() => route.path.replace('index.html', ''))
 const yearData = alldata.yearData;
 const tagData = alldata.tagData;
 

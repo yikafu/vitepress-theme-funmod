@@ -46,44 +46,39 @@ function activeLabel(e) {
 }
 </script>
 
-<style scoped>
+<style>
 div.toclist {
   overflow: auto;
 }
 
-ol {
+.toclist ol {
   position: sticky;
   top: 80px;
   list-style: none;
   padding-inline-start: 0;
 }
 
-li {
+.toclist ol li {
   border-left: 3px solid var(--bg-color);
   transition: border-left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-li.active {
+.toclist ol li.active {
   border-left: 3px solid var(--main-color);
 }
 
-a {
+.toclist ol li a {
   display: block;
   color: var(--color-text);
   padding-bottom: 0.2em;
 }
 
-.h2 {
+li a.h2 {
   padding-left: 8px;
 }
 
-.h3 {
+li a.h3 {
   display: block;
   padding-left: 20px;
-}
-@media (max-width: 1280px) {
-  .toc {
-    display: none;
-  }
 }
 </style>

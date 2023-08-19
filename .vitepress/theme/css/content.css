@@ -16,9 +16,11 @@
 }
 .content p {
   line-height: 1.5em;
-  text-indent: 2em;
   margin-block-end: 0.5em;
   word-wrap: break-word;
+}
+.content ol , .content ul{
+  padding-inline-start: 20px !important;
 }
 
 .content li {

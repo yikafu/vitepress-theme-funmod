@@ -49,8 +49,8 @@ onUnmounted(() => {
   text-align: center;
 }
 @media (max-width: 1280px) {
-  .returntop {
-    display: none;
+  .returntop{
+    display: none !important;
   }
 }
 </style>

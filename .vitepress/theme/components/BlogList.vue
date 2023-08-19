@@ -107,7 +107,7 @@ div.title {
   color: var(--main-color);
 }
 article p {
-  padding: 28px 0;
+  margin-bottom: 2em;
   text-indent: 2em;
   text-align: initial;
   word-wrap: break-word;

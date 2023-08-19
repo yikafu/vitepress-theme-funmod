@@ -86,4 +86,9 @@ function getTocData() {
   font-size: 1.2rem;
   color: #eee;
 }
+@media (max-width: 1280px) {
+  .toc {
+    display: none;
+  }
+}
 </style>

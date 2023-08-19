@@ -1,5 +1,5 @@
 <template>
-  <div class="banner" :style="`background-image: url(${imgurl});`">
+  <div class="banner">
     <div class="info">
       <span>
         <p class="text">Hello World</p>
@@ -8,18 +8,12 @@
   </div>
 </template>
 
-<script setup>
-import {onBeforeMount, ref} from 'vue'
-const imgurl = ref('')
-onBeforeMount(() => {
-  imgurl.value = 'https://dogefs.s3.ladydaily.com/~/source/wallhaven/full/p9/wallhaven-p97l5e.png?w=2560&h=1440&fmt=webp'
-})
-</script>
+<script setup></script>
 
 <style scoped>
 .banner {
   height: 100vh;
-  background-size: cover;
+  background: url('/bg.png') center center / cover no-repeat;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -30,5 +24,14 @@ onBeforeMount(() => {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
+}
+
+@media (max-width: 1280px) {
+  .banner {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
 }
 </style>

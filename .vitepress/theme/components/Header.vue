@@ -26,7 +26,16 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+function showTocList() {
+  let isshow = document.getElementsByClassName("toclist toc")[0];
+  if (isshow.style.display === "block") {
+    isshow.style.display = "none";
+  } else {
+    isshow.style.display = "block";
+  }
+}
+</script>
 
 <style scoped>
 header {
