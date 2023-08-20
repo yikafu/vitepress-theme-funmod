@@ -10,7 +10,7 @@
       <Archive :yeardata="yearData" />
     </template>
     <template v-else-if="path === '/tags/'">
-      <Tags :tagdata="tagData"/>
+      <Tags :tagdata="tagData" />
     </template>
     <NotFound v-else-if="page.isNotFound" />
     <MDPost v-else />
@@ -18,13 +18,13 @@
 </template>
 
 <script setup>
-import { computed} from "vue";
-import { useRoute , useData} from "vitepress";
+import { computed } from "vue";
+import { useRoute, useData } from "vitepress";
 import { data as alldata } from "../../post.data.js";
 
 const route = useRoute();
-const { page, frontmatter } = useData()
-const path = computed(() => route.path.replace('index.html', ''))
+const { page, frontmatter } = useData();
+const path = computed(() => route.path.replace("index.html", ""));
 const yearData = alldata.yearData;
 const tagData = alldata.tagData;
 

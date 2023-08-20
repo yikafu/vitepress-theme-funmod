@@ -34,9 +34,9 @@ function handleScroll() {
   const toc = document.querySelector(".toc");
   if (tocTop >= 200) {
     toc.style.position = "fixed";
-    toc.style.top = "77px";
+    toc.style.top = "84px";
   } else {
-    toc.style.top = "260px";
+    toc.style.top = "284px";
     toc.style.position = "absolute";
   }
 }
@@ -68,9 +68,9 @@ function getTocData() {
 }
 .toc {
   position: absolute;
-  width: 265px;
+  width: 275px;
   height: 100vh;
-  top: 260px;
+  top: 284px;
   right: 0px;
   bottom: 0;
 }

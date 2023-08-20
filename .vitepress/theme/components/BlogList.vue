@@ -83,10 +83,6 @@ div.post {
   position: relative;
 }
 
-div.title {
-  font-size: 30px;
-  font-weight: 600;
-}
 .post-time {
   font-size: 16px;
   display: inline;
