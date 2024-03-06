@@ -13,7 +13,7 @@
 <style scoped>
 .banner {
   height: 100vh;
-  background: url('/bg.png') center center / cover no-repeat;
+  background: url('/public/bg.jpg') center center / cover no-repeat;
   position: relative;
   overflow: hidden;
   display: flex;

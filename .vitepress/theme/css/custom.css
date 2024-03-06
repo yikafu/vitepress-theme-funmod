@@ -12,16 +12,12 @@
 
 :root {
   --main-color: #478384;
-  --light-color: #44617b;
-  --second-color: #887f7a;
-  /* --bg-color: #fff; */
-  --bg-color: #203744;
+  --text-color: #333;
+  --bg-color: #eae8e8;
+  --bg2-color:rgb(196, 193, 193)8;
   --color-gray: #666;
   --color-dark: #282c34;
-  --color-black: #000;
-  /* --color-text: #2c2e2f; */
-  --color-text: #e8ecef;
-  --code-span-color: #345162;
+  --code-span-color: #e1dcdc;
   --color-border: #000;
   --code-font-size: 0.6rem;
   --scrollbar-color: #ffffff;

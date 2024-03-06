@@ -30,7 +30,7 @@ export default defineConfigWithTheme({
   // 主题配置
   themeConfig: {
     search: {
-      provider: "local"
+      provider: "local",
     },
     // 打包配置(输出目录)
     outDir: "../dist",

@@ -1,5 +1,5 @@
 # vitepress-theme-funmod
 
-## 自用vitepress主题
+## vitepress主题
 
-完工
+基于vitepress设计的主题模板（渣作）

@@ -47,7 +47,7 @@ header {
   align-items: center;
   justify-content: space-between;
   /* 毛玻璃半透明效果 */
-  background-color: rgba(45, 73, 90, 0.8);
+  background-color: rgba(186, 207, 208, 0.847);
   backdrop-filter: saturate(180%) blur(20px);
   z-index: 100;
 }

@@ -13,7 +13,9 @@
       <Tags :tagdata="tagData" />
     </template>
     <NotFound v-else-if="page.isNotFound" />
-    <MDPost v-else />
+    <template v-else>
+      <MDPost />
+    </template>
   </main>
 </template>
 
@@ -27,5 +29,4 @@ const { page, frontmatter } = useData();
 const path = computed(() => route.path.replace("index.html", ""));
 const yearData = alldata.yearData;
 const tagData = alldata.tagData;
-
 </script>

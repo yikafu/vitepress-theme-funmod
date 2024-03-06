@@ -51,6 +51,7 @@ const props = defineProps({
 /* 具体盒子样式 */
 .card {
   color: var(--text-color);
+  background-color: var(--bg2-color);
   max-width: 100%;
   width: 760px;
   height: 220px;
